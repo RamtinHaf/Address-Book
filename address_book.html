@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="style_css.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="contact-box-template" style="display: none;">
+        <div class="contact-box">
+            <form>
+                <div class="fileds">
+                    <div class="contact-field name">
+                        <label for="name">Name:</label>
+                        <input type="text" placeholder="Michael Jackson">
+                    </div>
+                    <div class="contact-field phone">
+                        <label for="phone">Phone:</label>
+                        <input type="text" placeholder="00-00-00-00">
+                    </div>
+                    <div class="contact-field email">
+                        <label for="email">Email:</label>
+                        <input type="text" placeholder="john@doe.com">
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="add" onclick="addContact(event)">&#10004</button>
+                    <button id="edit" onclick="editContact(event)" style="display: none;">&#x270E</button>
+                    <button id="delete" onclick="deleteContact(event)" style="display: none;">&#128465</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <header>
+        <h1>Ramtin´s Address Book</h1>
+    </header>
+
+
+    <section id="contacts">
+        <h3>Your Contacts</h3>
+        <div id="search-container">
+            <label for="site-search">Search through book:</label>
+            <input type="search" id="site-search" name="q" onkeyup="doFilter(this)">
+        </div>
+
+        <div id="contacts-container">
+
+        </div>
+    </section>
+</body>
+
+</html>
